@@ -3,7 +3,9 @@ lazy val sparkStreaming = (project in file("./"))
   .settings(
     libraryDependencies ++= Seq(
       "org.apache.spark" %% "spark-core" % "2.4.4",
-      "org.apache.spark" %% "spark-sql" % "2.4.4"
+      "org.apache.spark" %% "spark-sql" % "2.4.4",
+      "org.apache.spark" %% "spark-streaming-kafka-0-10" % "2.4.4",
+      "org.apache.spark" %% "spark-streaming" % "2.4.4" /*% "provided"*/
     ),
     name := "spark-streaming",
     mainClass in Compile := Some("ru.neoflex.triad.SparkTellDifference"),
